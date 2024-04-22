@@ -561,6 +561,7 @@ while(True):
             direccion = left_right()
             os.system("cls")
 
+# Aqui nos quedamos
             if direccion == "I" or direccion == "i":
                 skull_URD()
                 next()
