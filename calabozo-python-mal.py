@@ -561,7 +561,6 @@ while(True):
             direccion = left_right()
             os.system("cls")
 
-# Aqui nos quedamos
             if direccion == "I" or direccion == "i":
                 skull_URD()
                 next()
@@ -679,13 +678,15 @@ while(True):
                         line()
                         print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(no_ran_1))
                         first_number = riddle()
-                        os.system("cls")
+                        os.system("cls"),
                         print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(no_ran_2))
                         second_number = riddle()
                         os.system("cls")
                         print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(no_ran_3))
                         third_number = riddle()
                         os.system("cls")
+
+                        # Continua AQUI!!!!!!!!!
 
                         if first_number == no_ran_1 and second_number == no_ran_2 and third_number == no_ran_3:
                             print("\n Encontraste una daga hecha con la mándibula de un carnero y una fotografía que muestra dos monedas.")
