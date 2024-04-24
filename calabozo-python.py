@@ -451,7 +451,8 @@ def left_right(): # Function that catch a left or right decision
 
     return decision
 
-def riddle():
+
+def riddle(): # Function that catches a riddle's answer
 
     while True:
 
@@ -469,6 +470,23 @@ def riddle():
         except: print("Valor incorrecto, revisa tu respuesta")
 
     return answer
+
+
+def downstairs_or_upstairs(): # Function that catches a decision to go upstairs or downstairs
+    
+    while True:
+        
+        try:
+            
+            decision = str(input("(H/S): "))
+
+            if decision == "S" or decision == "s" or decision == "H" or decision == "h": break
+
+            else: print("Opción inválida, solo se acepta \"s\" o \"h\"")
+
+        except: print("Opción inválida, solo se acepta \"s\" o \"h\"")
+
+    return decision
 
 
 # ---------------- MAIN FUNCTIONS ----------------
@@ -685,19 +703,169 @@ def main():
                         next()
                         line()
 
-                        print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(no_ran_1))
+                        print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(random_number_1))
                         first_number = riddle()
                         os.system("cls")
 
-                        print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(no_ran_2))
+                        print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(random_number_2))
                         second_number = riddle()
                         os.system("cls")
 
-                        print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(no_ran_3))
+                        print("\n El coeficiente correspondiente al resultado de la primer derivada de {}x^2".format(random_number_3))
                         third_number = riddle()
                         os.system("cls")                        
                         
-                        # Continua
+                        if first_number == random_number_1 and second_number == random_number_2 and third_number == random_number_3:
+                            
+                            print("\n Encontraste una daga hecha con la mándibula de un carnero y una fotografía que muestra dos monedas, tienen la inscripción \"Morte\" y \"Satana\"")
+                            dagger = True
+                            break
+                        
+                        else:
+                            
+                            line()
+                            print("\n Parece que no se ha abierto ¿Quieres intentarlo de nuevo?")
+                            again = yes_no()
+                            os.system("cls")
+
+                            if again == "s" or again == "S": continue
+
+                            else:
+                                line()
+                                print("\n De cualquier forma no creo que haya algo interesante dentro del baúl.")
+                                next()
+                                os.system("cls")
+                                break
+                            
+                else:
+                    
+                    print("\n De cualquier forma no creo que haya algo interesante dentro del baúl.")
+                    next()
+                    os.system("cls")
+                
+                line() # This is where you go, whether you open your trunk or not
+                time.sleep(1)
+                print("\n Sales del cuarto de lavado.")
+                time.sleep(1)
+                print("\n Te preguntas si es buena idea regresar a la habitación donde despertaste inicialmente.")
+                time.sleep(1)
+                print("\n O si simplemente deberías ir directo a la salida.")
+                time.sleep(1)
+
+                line()
+                print("\n ¿Quieres subir a la Habitación (H) o a la Salida (S)?")
+                floor = downstairs_or_upstairs()
+                os.system("cls")
+                # --- Here ends "stay in bed" branch ---
+
+                # --- Here starts "second chance" phase
+                if floor == "H" or floor == "h":
+                    
+                    time.sleep(1)
+                    print("\n La oscuridad es tan densa que aún con tu celular, no logras ver más allá de un metro por mucho.")
+                    time.sleep(1)
+                    print("\n Al subir las escaleras escuchas pasos, no sabes qué, pero algo está esperando al final de los escalones...")
+                    time.sleep(1)
+                    print("\n Ni bien dado el último escalón, sientes un calor y una respiración tan intesa que te petrifica.")
+                    next()
+
+                    creature()
+                    next()
+
+                    if dagger == True:
+                        
+                        line()
+                        print("\n Recuerdas que encontraste una daga en el baúl...")
+                        
+                        line()
+                        print("\n ¿Quieres utilizar la daga?")
+                        use_knive = yes_no()
+                        os.system("cls")
+
+                        if use_knive == "S" or use_knive == "s":
+                            
+                            big_mouth()
+                            time.sleep(1)
+                            print("\n Moriste devorado, a veces los cobardes son los que sobreviven...")
+                            next()
+                            # continue ############################3
+                        
+                        else:
+                            
+                            print("\n Al quedarte quieto te das cuenta que la criatura no parece querer dañarte.")
+                            time.sleep(1)
+                            print("\n Pasas a lado de la criatura mientras te mira directamente a los ojos.")
+                            time.sleep(1)
+                            
+                            print("\n .")
+                            time.sleep(1)
+                            print("\n .")
+                            time.sleep(1)
+                            print("\n .")
+                            time.sleep(1)
+                            
+                            print("\n Al llegar a la habitación te das cuenta de que la puerta fue bloqueada desde dentro...")
+                            next()
+                            os.system("cls")
+                            
+                            print("\n Antes de emprender el camino de regreso a la planta baja, encuentras en el suelo otra moneda de hierro.")
+                            time.sleep(1)
+                            
+                            print("\n La moneda tiene la inscripción \"in morte ultima veritas. vicit veritas in omnire\"")
+                            line()
+                            time.sleep(1)
+
+                            print("\n ¿Tomas la moneda? (S/N)")
+                            take_morte_coin = yes_no()
+
+                            if take_morte_coin == "s" or take_morte_coin == "S":
+                                  
+                                  morte_coin = True
+                                  print("\n Tomaste: Moneda \"Morte\"")
+
+                            else: print("\n Ignoraste: Moneda \"Morte\"")
+
+                            os.system("cls")
+
+                    else:
+                        print("\n El sobresalto provoca que sueltes tu fuente de luz.")
+                        time.sleep(1)
+                        print("\n Al reincorporarte ya no está frente a ti, ahora solo hay frío...")
+                        next()
+
+                        time.sleep(1)
+                        print("\n .")
+                        time.sleep(1)
+                        print("\n .")
+                        time.sleep(1)
+                        print("\n .")
+                        time.sleep(1)
+
+                        print("\n Al llegar a la habitación te das cuenta de que la puerta fue bloqueada desde dentro...")
+                        next()
+                        os.system("cls")
+
+                        print("\n Antes de emprender el camino de regreso a la planta baja, encuentras en el suelo otra moneda de hierro.")
+                        time.sleep(1)
+
+                        print("\n La moneda tiene la inscripción \"in morte ultima veritas. vicit veritas in omnire\"")
+                        line()
+                        time.sleep(1)
+
+                        print("\n ¿Tomas la moneda? (S/N)")
+                        take_morte_coin = yes_no()
+
+                        if take_morte_coin == "s" or take_morte_coin == "S":
+                              
+                              morte_coin = True
+                              print("\n Tomaste: Moneda \"Morte\"")
+
+                        else: print("\n Ignoraste: Moneda \"Morte\"")
+
+                        os.system("cls") # --- Here ends the "second chance" phase
+
+                        
+
 
 
 

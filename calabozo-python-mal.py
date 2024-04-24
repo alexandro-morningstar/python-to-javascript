@@ -686,8 +686,6 @@ while(True):
                         third_number = riddle()
                         os.system("cls")
 
-                        # Continua AQUI!!!!!!!!!
-
                         if first_number == no_ran_1 and second_number == no_ran_2 and third_number == no_ran_3:
                             print("\n Encontraste una daga hecha con la mándibula de un carnero y una fotografía que muestra dos monedas.")
                             daga = True
@@ -809,7 +807,7 @@ while(True):
                         
                         
 
-        # FINALES
+        # FINALES #########################
 
         # Final: Dos monedas y la daga
         if moneda_morte == True and moneda_satana == True and daga == True:
