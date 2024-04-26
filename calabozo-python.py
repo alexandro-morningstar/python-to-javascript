@@ -427,7 +427,7 @@ def  yes_no(): # Function that catch a yes or not decision
 
             else: print("Opción inválida, solo se acepta \"s\" o \"n\"")
         
-        except: print("Opción inválida, solo se acepta \"s\" o \"n\"")
+        except ValueError: print("Opción inválida, solo se acepta \"s\" o \"n\"")
     
     return decision
 
@@ -447,7 +447,7 @@ def left_right(): # Function that catch a left or right decision
 
             else: print("Opción inválida, solo se acepta \"i\" o \"d\"")
 
-        except: print("Opción inválida, solo se acepta \"i\" o \"d\"")
+        except ValueError: print("Opción inválida, solo se acepta \"i\" o \"d\"")
 
     return decision
 
@@ -467,7 +467,7 @@ def riddle(): # Function that catches a riddle's answer
 
             else: print("Valor incorrecto, revisa tu respuesta")
         
-        except: print("Valor incorrecto, revisa tu respuesta")
+        except ValueError: print("Valor incorrecto, revisa tu respuesta")
 
     return answer
 
@@ -484,16 +484,303 @@ def downstairs_or_upstairs(): # Function that catches a decision to go upstairs 
 
             else: print("Opción inválida, solo se acepta \"s\" o \"h\"")
 
-        except: print("Opción inválida, solo se acepta \"s\" o \"h\"")
+        except ValueError: print("Opción inválida, solo se acepta \"s\" o \"h\"")
 
     return decision
 
+
+# ---------------- FINALS ----------------
+
+def the_end():
+    
+    line()
+    time.sleep(1)
+    print("\n Bajas las escaleras, intentas abrir la puerta sin éxito. No puedes creer que la pesadilla aún no termine.")
+    time.sleep(1)
+    print("\n De pronto tienes las misma sensación... el mismo peligro que sentiste en la cama.")
+    time.sleep(1)
+    print("\n La puerta no se abrirá... lo único que puedes hacer es voltear.")
+    next()
+
+    face_flesh()
+    next()
+
+    time.sleep(1) #4
+    print("\n Aquí está \"él\", te extiende su mano... no estás muy seguro de qué hacer... ¿vale la pena el riesgo?")
+    line()
+
+
+def finals():
+    
+
+  def two_coins_and_dagger():
+      
+      the_end()
+      time.sleep(1)
+      print("\n ¿Entregas dos monedas de hierro o usas la daga? (monedas / daga)")
+      
+      while True:
+      
+          try:
+      
+              decision = str(input("(Monedas / Daga): "))
+      
+              if decision == "Monedas" or decision == "monedas" or decision == "Daga" or decision == "daga": break
+              
+              else: print("Opción inválida, solo se acepta \"monedas\" o \"daga\"")
+          
+          except ValueError: print("Opción inválida, solo se acepta \"monedas\" o \"daga\"")
+
+      if decision == "monedas" or decision == "Monedas":
+          
+          os.system("cls")
+          line()
+          time.sleep(1)
+          print("\n Le entregas ambas monedas... el solamente sonrie mientras pierdes la consciencia...")
+          time.sleep(1)
+          print("\n Despiertas en la habitación donde inició todo. Es de día y tienes una resaca horrible. Al igual que ese sueño...")
+          next()
+
+          time.sleep(1)
+          print("\n ###### FELICIDADES! SOBREVIVISTE A LA PESADILLA ######")
+          next()
+          os.system("cls")
+
+      else:
+          
+          os.system("cls")
+          line()
+          time.sleep(1)
+          print("\n Empuñas la daga y apuñalas a \"él\", dos monedas de hierro con la inscripción impía te otorgan el poder para terminar con la amenaza")
+          time.sleep(2)
+          print("\n Ahora alguien debe tomar su lugar...")
+          time.sleep(2) #1
+          print("\n Ahora la pesadilla es eterna...")
+          next()
+
+          time.sleep(1) #1
+          print("\n ###### SOBREVIVISTE A LA PESADILLA, PERO ¿A QUÉ COSTO? ######")
+          next()
+          os.system("cls")
+
+
+  def two_coins_not_dagger():
+      
+      the_end()
+      time.sleep(1)
+      print("\n ¿Entregas dos monedas de hierro o intentas huir? (monedas / huir)")
+
+      while True:
+          
+          try:
+              decision = str(input("(Monedas / Huir): "))
+      
+              if decision == "Monedas" or decision == "monedas" or decision == "Huir" or decision == "huir": break
+      
+              else: print("Opción inválida, solo se acepta \"monedas\" o \"huir\"")
+                  
+          except ValueError: print("Opción inválida, solo se acepta \"monedas\" o \"huir\"")
+  
+      if decision == "monedas" or decision == "Monedas":
+          
+          os.system("cls")
+          line()
+          time.sleep(1)
+          print("\n Le entregas ambas monedas... el solamente sonrie mientras pierdes la consciencia...")
+          time.sleep(1)
+          print("\n Despiertas en la habitación donde inició todo. Es dedía y tienes una resaca horrible. Al igual que ese sueño...")
+          next()
+
+          time.sleep(1)
+          print("\n ###### FELICIDADES! SOBREVIVISTE A LA PESADILLA ######")
+          next()
+          os.system("cls")
+
+      else:
+          os.system("cls")
+          line()
+          scary_face()
+          next()
+          print("\n ###### NADIE PEUEDE HUIR DE \"ÉL\"... ######")
+          time.sleep(1)
+          print("\n La muerte es la verdad última. La verdad prevalece sobre todas las cosas.")
+          next()
+          os.system("cls")
+
+
+  def one_coin_and_dagger():
+      
+      the_end()
+      time.sleep(1)
+      print("\n ¿Entregas una moneda de hierro o usas la daga? (Moneda / Daga)")
+
+      while True:
+          
+          try:
+              decision = str(input("(moneda / daga): "))
+
+              if decision == "Moneda" or decision == "moneda" or decision == "Daga" or decision == "daga": break
+              
+              else: print("Opción inválida, solo se acepta \"moneda\" o \"daga\"")
+          
+          except ValueError: print("Opción inválida, solo se acepta \"moneda\" o \"daga\"")
+  
+      if decision == "moneda" or decision == "Moneda":
+          
+          os.system("cls")
+          line()
+          time.sleep(1)
+          print("\n Entregas una moneda de hierro mientras eres mirado con desdén.")
+          time.sleep(1)
+          print("\n \"Él\" solo se aleja en la oscuridad.")
+          next()
+
+          print("\n ###### NO HAY FIN PARA TU PESADILLA... ######")
+          next()
+          os.system("cls")
+
+      else:
+          
+          os.system("cls")
+          scary_face()
+          next()
+
+          print("\n Apuñalaste a \"Él\" sin tener el poder suficiente.")
+          time.sleep(1)
+          print("\n ###### EL TORMENTO HA TERMINADO, AL IGUAL QUE TU VIDA ######")
+          next()
+          os.system("cls")
+
+
+  def one_coin_not_dagger():
+      
+      the_end()
+      time.sleep(4)
+      print("\n ¿Entregas una moneda de hierro o huyes? (moneda / huir)")
+
+      while(True):
+      
+          try:
+      
+              decision = str(input("(moneda / huir): "))
+      
+              if decision == "Moneda" or decision == "moneda" or decision == "Daga" or decision == "daga": break
+      
+              else: print("Opción inválida, solo se acepta \"moneda\" o \"huir\"")
+      
+          except ValueError: print("Opción inválida, solo se acepta \"moneda\" o \"huir\"")
+  
+      if decision == "moneda" or decision == "Moneda":
+          
+          os.system("cls")
+          line()
+          time.sleep(1)
+          print("\n Entregas una moneda de hierro mientras eres mirado con desdén.")
+          time.sleep(1)
+          print("\n \"Él\" solo se aleja en la oscuridad.")
+          time.sleep(1) #1
+          print("\n ###### NO HAY FIN PARA TU PESADILLA... ######")
+          next()
+          os.system("cls")
+
+      else:
+          os.system("cls")
+          line()
+          scary_face()
+          next()
+          
+          print("\n ###### NADIE PEUEDE HUIR DE \"ÉL\"... ######")
+          time.sleep(1)
+          print("\n La muerte es la verdad última. La verdad prevalece sobre todas las cosas.")
+          next()
+          os.system("cls")
+
+
+  def not_coins_and_dagger():
+      
+      the_end()
+      time.sleep(1)
+      print("\n ¿Huyes o usas la daga? (huir / daga)")
+
+      while True:
+          
+          try:
+              
+              decision = str(input("(Huir / Daga): "))
+      
+              if decision == "huir" or decision == "Huir" or decision == "Daga" or decision == "daga": break
+      
+              else: print("Opción inválida, solo se acepta \"huir\" o \"daga\"")
+
+          except ValueError: print("Opción inválida, solo se acepta \"huir\" o \"daga\"")
+
+      if decision == "huir" or decision == "Huir":
+          
+          os.system("cls")
+          line()
+          scary_face()
+          next()
+
+          time.sleep(1)
+          print("\n ###### NADIE PEUEDE HUIR DE \"ÉL\"... ######")
+          time.sleep(1)
+          print("\n La muerte es la verdad última. La verdad prevalece sobre todas las cosas.")
+          next()
+          os.system("cls")
+
+      else:
+          
+          os.system("cls")
+          line()
+          scary_face()
+          next()
+
+          print("\n Apuñalaste a \"Él\" sin tener el poder suficiente.")
+          time.sleep(1)
+          print("\n ###### EL TORMENTO HA TERMINADO, AL IGUAL QUE TU VIDA ######")
+          next()
+          os.system("cls")
+
+  def not_coins_not_dagger():
+      
+      the_end()
+      time.sleep(1) #1
+      print("\n ¿Quieres huir? (S/N)")
+      scape = yes_no()
+
+      if scape == "S" or scape == "s":
+          
+          os.system("cls")
+          line()
+          scary_face()
+          next()
+
+          print("\n ###### NADIE PEUEDE HUIR DE \"ÉL\"... ######")
+          time.sleep(1)
+          print("\n La muerte es la verdad última. La verdad prevalece sobre todas las cosas.")
+          next()
+          os.system("cls")
+      
+      else:
+          
+          os.system("cls")
+          line()
+          skull_URD()
+          next()
+
+          print("\n ###### FELICIDADES, AL MENOS ACEPTASTE TU MUERTE CON DIGNIDAD ######")
+          next()
+          os.system("cls")
+
+  return two_coins_and_dagger, two_coins_not_dagger, one_coin_and_dagger, one_coin_not_dagger, not_coins_and_dagger, not_coins_not_dagger
+      
 
 # ---------------- MAIN FUNCTIONS ----------------
 
 def main():
 
-    # while True:
+  while True:
+
     title = "Bienvenido a La Pesadilla"
     print("⛧"*len(title*2) + "\n" + title + "\n" + "⛧"*len(title*2))
     
@@ -531,7 +818,8 @@ def main():
         wake_up = yes_no()
         os.system("cls")
 
-        if wake_up == "s" or wake_up == "S": # --- Here starts "Getting out to bed" branch ---
+        # --- Here starts "Getting out to bed" branch ---
+        if wake_up == "s" or wake_up == "S":
             
             print("\n Al levantarte de la cama sientes como algo te toma violentamente de los tobillos y quiere arrastrate al fondo.")
             time.sleep(1)
@@ -581,7 +869,7 @@ def main():
                 
                 next()
                 os.system("cls")
-                # continue / usar cuando se habilite el while True
+                continue
 
             else: # Choose right direction in the coridor
 
@@ -598,9 +886,11 @@ def main():
                 print("\n Al reincorporarte ya no está frente a ti, ahora solo hay frío...")
                 next()
 
-                os.system("cls") # --- Here ends "getting out to bed" branch ---
+                os.system("cls")
+        # --- Here ends "getting out to bed" branch ---
 
-        else: # --- Here starts "stay in bed" branch ---
+        # --- Here starts "stay in bed" branch ---
+        else:
 
             print("\n Mientras estás recostado buscas tu celular en los bolsillos para alumbrar la habitación.")
             time.sleep(1)
@@ -633,7 +923,7 @@ def main():
                 next()
 
                 os.system("cls")
-                # continue / usar al habilitar el while True
+                continue
 
             else: # Choose not check under the bed
 
@@ -788,7 +1078,7 @@ def main():
                             time.sleep(1)
                             print("\n Moriste devorado, a veces los cobardes son los que sobreviven...")
                             next()
-                            # continue ############################3
+                            continue
                         
                         else:
                             
@@ -862,11 +1152,34 @@ def main():
 
                         else: print("\n Ignoraste: Moneda \"Morte\"")
 
-                        os.system("cls") # --- Here ends the "second chance" phase
+                        os.system("cls")
+                        # --- Here ends the "second chance" phase
+      
+      # --- Here starts "The End" --- 
+        all_finals = finals()
 
-                        
+        if morte_coin == True and satana_coin == True and dagger == True: all_finals[0]()
+        
+        elif morte_coin == True and satana_coin == True and dagger == False: all_finals[1]()
 
+        elif morte_coin == True and satana_coin == False and dagger == True: all_finals[2]()
 
+        elif morte_coin == False and satana_coin == True and dagger == True: all_finals[2]()
+
+        elif morte_coin == True and satana_coin == False and dagger == False: all_finals[3]()
+
+        elif morte_coin == False and satana_coin == True and dagger == False: all_finals[3]()
+
+        elif morte_coin == False and satana_coin == False and dagger == True: all_finals[4]()
+
+        elif morte_coin == False and satana_coin == False and dagger == False: all_finals[5]()
+
+        continue
+    
+    else:
+        
+        print("BIENAVENTURADOS LOS MANSOS, PORQUE SON PRESAS FÁCILES...")
+        break                        
 
 
 if __name__ == "__main__":
